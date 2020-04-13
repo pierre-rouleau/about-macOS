@@ -8,6 +8,6 @@ environment on macOS.
 It is, like all used software, a work in progress, a collection that will grow and change over time.
 All text is written in reStructuredText.
 
-Enjoy, and please don't hesitate to provide feedback!
+If you find it useful don't hesitate to use some of the ideas, and don't hesitate to provide feedback!
 
 .. _document tree: doc/macos-env.rst
