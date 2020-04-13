@@ -1,0 +1,11 @@
+# Identifies files to be ignored by Git.
+
+# Emacs Backup files
+*~
+
+# Emacs temporary files
+.#*
+*#
+
+# macOS fork files
+.DS_Store
