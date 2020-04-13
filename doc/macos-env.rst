@@ -2,9 +2,9 @@
 macOS Development Environment
 =============================
 
-:Time-stamp: <2020-04-13 16:48:13, updated by Pierre Rouleau>
+:Time-stamp: <2020-04-13 16:56:35, updated by Pierre Rouleau>
 :Copyright: Copyright © 2020 by Pierre Rouleau
-:License: `MIT <LICENSE>`_
+:License: `MIT <../LICENSE>`_
 
 Shells
 ======
