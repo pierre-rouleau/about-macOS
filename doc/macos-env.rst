@@ -2,7 +2,7 @@
 macOS Development Environment
 =============================
 
-:Time-stamp: <2020-04-15 07:53:39, updated by Pierre Rouleau>
+:Time-stamp: <2020-04-15 07:58:02, updated by Pierre Rouleau>
 :Copyright: Copyright © 2020 by Pierre Rouleau
 :License: `MIT <../LICENSE>`_
 
@@ -287,7 +287,7 @@ the ``~/.basrc`` file:
           alias use-erlang='source envfor-erlang-22-3-2'
 
 With these it is now possible to activate a Bash shell to get all it needs, as
-is shown in the following session::
+is shown in the following session:
 
 .. code:: bash
 
