@@ -2,9 +2,15 @@
 macOS Development Environment
 =============================
 
-:Time-stamp: <2020-04-15 07:40:46, updated by Pierre Rouleau>
+:Time-stamp: <2020-04-15 07:50:06, updated by Pierre Rouleau>
 :Copyright: Copyright © 2020 by Pierre Rouleau
 :License: `MIT <../LICENSE>`_
+
+.. contents::  **Table Of Contents**
+.. sectnum::
+
+-----------------------------------------------------------------------------------------
+
 
 Shells
 ======
@@ -145,7 +151,7 @@ A couple of important points about macOS environment:
    - The ``/usr/bin``, ``/bin``, ``/usr/sbin`` and ``/sbin`` directories are
      protected by Apples' `System Integrity Protection`_ since OS X El
      Capitan.  So you can't store anything in those directories.  Only Apple
-     does.
+     can as part as the OS installation.
 
    - ``/usr/local`` directory is empty, except for the file ``.com.apple.installer.keep``
 
@@ -338,5 +344,8 @@ to display the root of the Erlang executable::
 
 
 
-The following scripts and alias allow me to create various environments for the
-`Erlang programming language`_,
+    The following scripts and alias allow me to create various environments for the
+    `Erlang programming language`_,
+
+
+-----------------------------------------------------------------------------------------
