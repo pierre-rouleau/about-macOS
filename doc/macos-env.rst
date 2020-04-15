@@ -2,7 +2,7 @@
 macOS Development Environment
 =============================
 
-:Time-stamp: <2020-04-15 07:58:02, updated by Pierre Rouleau>
+:Time-stamp: <2020-04-15 08:48:49, updated by Pierre Rouleau>
 :Copyright: Copyright © 2020 by Pierre Rouleau
 :License: `MIT <../LICENSE>`_
 
@@ -289,7 +289,7 @@ the ``~/.basrc`` file:
 With these it is now possible to activate a Bash shell to get all it needs, as
 is shown in the following session:
 
-.. code:: bash
+.. code:: shell
 
           >computer@[~]
           > man -w erl
@@ -330,6 +330,58 @@ to display the root of the Erlang executable:
         3> >computer@[~]
         >
 
+If you also installed Elixir_ with the ``brew install elixir``, then the Elixir
+shell is also available.  Here we just enter the Elixir 1.10.2 shell and then
+type Control-C to break and type 'a' to abort back to the OS shell:
+
+.. code:: bash
+
+        >computer@[~]
+        > iex
+        Erlang/OTP 22 [erts-10.7.1] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1] [hipe] [dtrace]
+
+        Interactive Elixir (1.10.2) - press Ctrl+C to exit (type h() ENTER for help)
+        iex(1)>
+        BREAK: (a)bort (A)bort with dump (c)ontinue (p)roc info (i)nfo
+               (l)oaded (v)ersion (k)ill (D)b-tables (d)istribution
+        a
+        >computer@[~]
+        >
+
+To complete the check, if you installed LFE_, we can also try it.
+Here's a touch and go or LFE version 1.3:
+
+.. code:: bash
+
+
+        >computer@[~]
+        > lfe
+        Erlang/OTP 22 [erts-10.7.1] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1] [hipe] [dtrace]
+
+           ..-~.~_~---..
+          (      \\     )    |   A Lisp-2+ on the Erlang VM
+          |`-.._/_\\_.-':    |   Type (help) for usage info.
+          |         g |_ \   |
+          |        n    | |  |   Docs: http://docs.lfe.io/
+          |       a    / /   |   Source: http://github.com/rvirding/lfe
+           \     l    |_/    |
+            \   r     /      |   LFE v1.3 (abort with ^G)
+             `-E___.-'
+
+        lfe> (exit)
+        ok
+        lfe> >computer@[~]
+        >
+
+In the above sessions, notice that all 3 shells display the same Erlang base
+information::
+
+        Erlang/OTP 22 [erts-10.7.1] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1] [hipe] [dtrace]
+
+That's because all 3 languages are BEAM_ programming languages.  They can be
+used simultaneously to create a system and can inter-operate.  There are
+several other BEAM programming languages, most of them are in experimental
+stages in early 2020 but worth checking out.
 
 .. _Erlang:
 .. _Erlang programming language: https://github.com/pierre-rouleau/about-erlang/blob/master/README.rst
@@ -349,5 +401,25 @@ to display the root of the Erlang executable:
     The following scripts and alias allow me to create various environments for the
     `Erlang programming language`_,
 
+
+        Manual installation using Erlang OTP Files
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+        Using Homebrew
+        ~~~~~~~~~~~~~~
+
+
+        Using asdf and kerl
+        ~~~~~~~~~~~~~~~~~~~
+
+
+        Using kerl
+        ~~~~~~~~~~
+
+
+        Using Erlang Installer from Erlang Solutions
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -----------------------------------------------------------------------------------------
