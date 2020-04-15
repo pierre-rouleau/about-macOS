@@ -2,7 +2,7 @@
 macOS Development Environment
 =============================
 
-:Time-stamp: <2020-04-15 07:51:23, updated by Pierre Rouleau>
+:Time-stamp: <2020-04-15 07:53:39, updated by Pierre Rouleau>
 :Copyright: Copyright © 2020 by Pierre Rouleau
 :License: `MIT <../LICENSE>`_
 
@@ -289,7 +289,7 @@ the ``~/.basrc`` file:
 With these it is now possible to activate a Bash shell to get all it needs, as
 is shown in the following session::
 
-.. code:: shell
+.. code:: bash
 
           >computer@[~]
           > man -w erl
@@ -313,7 +313,9 @@ is shown in the following session::
           >
 
 And then we can run the Erlang shell, using the ``code:root_dir()`` function
-to display the root of the Erlang executable::
+to display the root of the Erlang executable:
+
+.. code:: bash
 
         >computer@[~]
         > erl
