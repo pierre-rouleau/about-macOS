@@ -2,7 +2,7 @@
 macOS Development Environment
 =============================
 
-:Time-stamp: <2020-04-15 07:50:06, updated by Pierre Rouleau>
+:Time-stamp: <2020-04-15 07:51:23, updated by Pierre Rouleau>
 :Copyright: Copyright © 2020 by Pierre Rouleau
 :License: `MIT <../LICENSE>`_
 
@@ -169,10 +169,10 @@ A couple of important points about macOS environment:
 
 
 Environment for Erlang
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 Installing Erlang, LFE and Elixir with Homebrew
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If all you want is being able to use Erlang_, Elixir_ or LFE_ (Lisp Flavored
 Erlang), 3 of the programming languages running on the
