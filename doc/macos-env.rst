@@ -2,7 +2,7 @@
 macOS Development Environment
 =============================
 
-:Time-stamp: <2020-04-15 08:48:49, updated by Pierre Rouleau>
+:Time-stamp: <2020-04-15 08:55:21, updated by Pierre Rouleau>
 :Copyright: Copyright © 2020 by Pierre Rouleau
 :License: `MIT <../LICENSE>`_
 
@@ -385,6 +385,7 @@ stages in early 2020 but worth checking out.
 
 .. _Erlang:
 .. _Erlang programming language: https://github.com/pierre-rouleau/about-erlang/blob/master/README.rst
+.. _BEAM:
 .. _BEAM Virtual Machine:        https://en.wikipedia.org/wiki/BEAM_(Erlang_virtual_machine)
 .. _Elixir:                      https://en.wikipedia.org/wiki/Elixir_(programming_language)
 .. _LFE:                         https://en.wikipedia.org/wiki/LFE_(programming_language)
