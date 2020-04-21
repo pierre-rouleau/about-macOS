@@ -2,7 +2,7 @@
 macOS Development Environment
 =============================
 
-:Time-stamp: <2020-04-21 08:21:03, updated by Pierre Rouleau>
+:Time-stamp: <2020-04-21 14:51:08, updated by Pierre Rouleau>
 :Copyright: Copyright © 2020 by Pierre Rouleau
 :License: `MIT <../LICENSE>`_
 
@@ -402,7 +402,7 @@ is shown in the following session:
 And then we can run the Erlang shell, using the ``code:root_dir()`` function
 to display the root of the Erlang executable:
 
-.. code:: bash
+.. code:: erlang
 
         >computer@[~]
         > erl
@@ -421,7 +421,7 @@ If you also installed Elixir_ with the ``brew install elixir``, then the Elixir
 shell is also available.  Here we just enter the Elixir 1.10.2 shell and then
 type Control-C to break and type 'a' to abort back to the OS shell:
 
-.. code:: bash
+.. code:: elixir
 
         >computer@[~]
         > iex
@@ -438,7 +438,7 @@ type Control-C to break and type 'a' to abort back to the OS shell:
 To complete the check, if you installed LFE_, we can also try it.
 Here's a touch and go or LFE version 1.3:
 
-.. code:: bash
+.. code:: lfe
 
 
         >computer@[~]
