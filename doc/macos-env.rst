@@ -2,7 +2,7 @@
 macOS Development Environment
 =============================
 
-:Time-stamp: <2020-04-15 08:55:21, updated by Pierre Rouleau>
+:Time-stamp: <2020-04-21 08:21:03, updated by Pierre Rouleau>
 :Copyright: Copyright © 2020 by Pierre Rouleau
 :License: `MIT <../LICENSE>`_
 
@@ -24,7 +24,7 @@ Convenience Command Aliases
 
 I created a set of command alias that I use in various OSes: macOS, Linux and
 Windows alike.  I stored them inside the ``.bashrc`` file which is source
-by the ``.bash_profile`` to make them available to the bash shells.
+by the ``.bash_profile`` to make them available to interactive bash shells.
 
 The first part of those aliases are just simple commands abbreviations.
 
@@ -77,6 +77,93 @@ The first part of those aliases are just simple commands abbreviations.
           alias p='python'
           alias p2='python2'
           alias p3='python3'
+
+Setting Up Prompt for the shell and Emacs vterm
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+I like to be able to see the host name, the current working directory and the
+time on my prompt.  Since this might be a long string, I make this text bold
+to make it stand out and I make my prompt use 2 lines.  Here's my code inside
+my ``.bashrc`` file:
+
+.. code:: bash
+
+    # Prompt control
+    # ==============
+    #
+    # \d - Current date
+    # \h - Host name
+    # \t - Current time
+    # \# - Command number
+    # \u - User name
+    # \W - Current working directory (ie: Desktop/)
+    # \w - Current working directory, full path (ie: /Users/Admin/Desktop)
+
+    # Aside from the above codes, it's possible to colorize the prompt
+    # with ANSI sequence color codes
+    # (see https://en.wikipedia.org/wiki/ANSI_escape_code)
+    #
+    # For using this coloring method:
+    # \e[     - start color scheme
+    #   0;32  - color (green)
+    #   m     - end of color
+    # ...  prompt
+    # \e[m  - stop color scheme
+    #
+    # We can also use the tput command, which allows
+    # putting the prompt in bold. tput sgr0 resets the coloring.
+    #
+
+    export PS1="\[$(tput bold)\]>\h@\d@\t[\w]\n> \[$(tput sgr0)\]"
+
+I also use Emacs and the excellent `Emacs-libvterm (vterm)`_ terminal emulator
+package.  To enable the same prompt inside a Emacs vterm buffer and also to
+enable some other nice features of vterm, I put the following code at the end
+of my ``.bashrc`` file:
+
+.. code:: bash
+
+    # libvterm - vterm configuration
+    # ------------------------------
+    #
+    # The following code is recommended for vterm installation in its home page at:
+    # https://github.com/akermu/emacs-libvterm#shell-side-configuration
+
+    function vterm_printf(){
+        if [ -n "$TMUX" ]; then
+            # Tell tmux to pass the escape sequences through
+            # (Source: http://permalink.gmane.org/gmane.comp.terminal-emulators.tmux.user/1324)
+            printf "\ePtmux;\e\e]%s\007\e\\" "$1"
+        elif [ "${TERM%%-*}" = "screen" ]; then
+            # GNU screen (screen, screen-256color, screen-256color-bce)
+            printf "\eP\e]%s\007\e\\" "$1"
+        else
+            printf "\e]%s\e\\" "$1"
+        fi
+    }
+
+
+    # The following code implements a clear inside vterm.
+    # See: https://github.com/akermu/emacs-libvterm#vterm-clear-scrollback
+
+    if [[ "$INSIDE_EMACS" = 'vterm' ]]; then
+        function clear(){
+            vterm_printf "51;Evterm-clear-scrollback";
+            tput clear;
+        }
+    fi
+
+    # Directory tracking for vterm
+    # See: https://github.com/akermu/emacs-libvterm#directory-tracking-and-prompt-tracking
+    vterm_prompt_end(){
+        vterm_printf "51;A$(whoami)@$(hostname):$(pwd)"
+    }
+    if [[ "$INSIDE_EMACS" = 'vterm' ]]; then
+        export PS1=$PS1'\[$(vterm_prompt_end)\]'
+    fi
+
+
+.. _Emacs-libvterm (vterm): https://github.com/akermu/emacs-libvterm#message-passing
 
 
 Environment Setup Strategy
