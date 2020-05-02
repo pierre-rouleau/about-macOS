@@ -2,7 +2,7 @@
 macOS Development Environment
 =============================
 
-:Time-stamp: <2020-04-21 14:51:08, updated by Pierre Rouleau>
+:Time-stamp: <2020-05-02 16:25:25, updated by Pierre Rouleau>
 :Copyright: Copyright © 2020 by Pierre Rouleau
 :License: `MIT <../LICENSE>`_
 
@@ -35,7 +35,11 @@ The first part of those aliases are just simple commands abbreviations.
           # --------
           alias ..='cd ..'
           alias ...='cd ../..'
+          alias ....='cd ../../..'
 
+          # show exit-code of last executed command
+          # ---------------------------------------
+          alias ?='echo $?'
 
           # Clear screen
           # ------------
